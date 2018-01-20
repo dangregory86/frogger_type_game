@@ -9,8 +9,8 @@ far side of the track to the water.
 
 ##Instructions##
 ============
-
-First you will be presented with a modal where you can select your character.
+First you need to load index.html into your favourite browser.
+You will then be presented with a modal where you can select your character.
 Once you've selected click start and the game will begin.
 You then use the arrow keys to control your character's movement being sure to dodge the bugs.
 

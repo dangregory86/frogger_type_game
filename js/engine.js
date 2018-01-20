@@ -93,9 +93,7 @@ var Engine = (function(global) {
 
   function checkCollisions() {
     allEnemies.forEach(function(enemy) {
-      if ((enemy.x < player.x && (enemy.x + 50) > player.x) && (enemy.y < player.y && (enemy.y + squareHeight) > player.y)) {
-        gameOver = true;
-      }
+      enemy.checkColision(player);
     });
   }
 

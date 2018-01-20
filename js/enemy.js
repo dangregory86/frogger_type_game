@@ -8,7 +8,7 @@ class Enemy {
   */
   constructor(y, speed) {
     this.sprite = 'images/enemy-bug.png';
-    this.x = -squareWidth;
+    this.x = -SQUAREWIDTH;
     this.y = y * squareHeight - 30;
     this.speed = speed;
     this.minSpeed = 75;
@@ -18,11 +18,11 @@ class Enemy {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    if (this.x < canWidth + 30) {
+    if (this.x < CANWIDTH + 30) {
       this.x += (this.speed * dt);
     } else {
       this.speed = Math.floor(Math.random() * 100) + this.minSpeed;
-      this.x = -squareWidth;
+      this.x = -SQUAREWIDTH;
     }
   };
 
@@ -42,6 +42,18 @@ class Enemy {
   * @Description. This function sets all the enemy variables back to initial.
   */
   resetEn() {
-    this.x = -squareWidth;
+    this.x = -SQUAREWIDTH;
   }
+
+  /*
+  * @Description. a function to check if the enemy is in colision with the player
+  * @Params {enemy object, player object}
+  */
+  checkColision(player){
+    if ((this.x < player.x && (this.x + 50) > player.x) && (this.y < player.y && (this.y + squareHeight) > player.y)) {
+      gameOver = true;
+    }
+  }
+
+
 }

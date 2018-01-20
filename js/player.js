@@ -8,8 +8,10 @@ class Player {
   */
   constructor() {
     this.sprite = 'images/char-boy.png';
-    this.x = canWidth / 2 - squareWidth / 2;
-    this.y = canHeight - (2 * squareHeight - 1 + 40);
+    this.startX = CANWIDTH / 2 - SQUAREWIDTH / 2;
+    this.startY = CANHEIGHT - (2 * SQUAREHEIGHT - 1 + 40);
+    this.x = this.startX;
+    this.y = this.startY;
   }
 
   update(direction) {
@@ -30,28 +32,28 @@ class Player {
   handleInput(direction) {
     switch (direction) {
       case 'left':
-        this.x -= squareWidth;
+        this.x -= SQUAREWIDTH;
         if (this.x < 0) {
           this.x = 0;
         }
         break;
       case 'right':
-        this.x += squareWidth;
-        if (this.x > canWidth - 1) {
-          this.x = canWidth - 100;
+        this.x += SQUAREWIDTH;
+        if (this.x > CANWIDTH - 1) {
+          this.x = CANWIDTH - 100;
         }
         break;
       case 'up':
-        this.y -= squareHeight;
+        this.y -= SQUAREHEIGHT;
         if (this.y < -10) {
           this.y = -10;
         }
         this.score();
         break;
       case 'down':
-        this.y += squareHeight;
-        if (this.y > canHeight - (2 * squareHeight + 40)) {
-          this.y = canHeight - (2 * squareHeight - 1 + 40);
+        this.y += SQUAREHEIGHT;
+        if (this.y > CANHEIGHT - (2 * SQUAREHEIGHT + 40)) {
+          this.y = CANHEIGHT - (2 * SQUAREHEIGHT - 1 + 40);
         }
         break;
     }
@@ -72,7 +74,7 @@ class Player {
   * @Description. this function resets the player back to te original posistion
   */
   resetPl() {
-    this.x = canWidth / 2 - squareWidth / 2;
-    this.y = canHeight - (2 * squareHeight - 1 + 40);
+    this.x = this.startX;
+    this.y = this.startY;
   }
 }
