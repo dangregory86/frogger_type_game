@@ -1,13 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+  <head>
     <meta charset="UTF-8">
     <title>Effective JavaScript: Frogger</title>
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  </head>
+
+  <body>
+    <!-- A header section to show the level, score and title -->
+    <header>
+      <h1 class="text">Get to the water</h1>
+      <div class="header-details">
+        <span class="header-span text" id="score">You have got 0 people across</span>
+        <span class="header-span text Timer" id="time">You have survived for 0 seconds</span>
+        <span class="header-span text" id="level">Level: 1</span>
+      </div>
+    </header>
+
+    <!-- The Modal - template taken from w3schools.com -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <h1 class="text">Select a character!!</h1>
+        <div class="container">
+          <img src="images/char-boy.png" alt="character boy" class="highlight dark">
+          <img src="images/char-cat-girl.png" alt="character cat girl" class="highlight">
+          <img src="images/char-horn-girl.png" alt="character horn girl" class="highlight">
+          <img src="images/char-pink-girl.png" alt="character pink girl" class="highlight">
+          <img src="images/char-princess-girl.png" alt="character princess girl" class="highlight">
+        </div>
+        <p id="modal-text" class="text">Select the character you would like to play with!!<br>Then press start.</p>
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="restartYes()">Start</button>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="js/resources.js"></script>
-    <script src="js/app.js"></script>
     <script src="js/engine.js"></script>
-</body>
+    <script src="js/enemy.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
 </html>

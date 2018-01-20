@@ -1,3 +1,76 @@
 body {
-    text-align: center;
+  text-align: center;
+  background-color: #ffccbc;
+}
+
+/*CSS values for the text elements on the screen  */
+
+.text {
+  color: #616161;
+  font-family: fantasy;
+}
+
+.header-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-span {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+/* css values for modal - template taken from w3school.com */
+
+/* The Modal (background) */
+
+.modal {
+  display: block;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  background-color: lightsteelblue;
+}
+
+/* Modal Content */
+
+.modal-content {
+  background-color: #b39ddb;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* centering the modal text */
+
+#modal-text {
+  text-align: center;
+}
+
+.dark {
+  background-color: lightsteelblue;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
 }
