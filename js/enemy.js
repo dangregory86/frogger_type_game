@@ -9,7 +9,7 @@ class Enemy {
   constructor(y, speed) {
     this.sprite = 'images/enemy-bug.png';
     this.x = -SQUAREWIDTH;
-    this.y = y * squareHeight - 30;
+    this.y = y * SQUAREHEIGHT - 30;
     this.speed = speed;
     this.minSpeed = 75;
   }
@@ -50,7 +50,7 @@ class Enemy {
   * @Params {enemy object, player object}
   */
   checkColision(player){
-    if ((this.x < player.x && (this.x + 50) > player.x) && (this.y < player.y && (this.y + squareHeight) > player.y)) {
+    if ((this.x < player.x && (this.x + 50) > player.x) && (this.y < player.y && (this.y + SQUAREHEIGHT) > player.y)) {
       gameOver = true;
     }
   }
