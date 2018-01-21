@@ -47,7 +47,7 @@ function increaselevel() {
 function startTimer(time) {
   $('.Timer').text('You have survived for: 0 Seconds')
   timer = setInterval(function() {
-    $('.Timer').text("You have survived for: " + Math.round((new Date - time) / 1000, 0) + " Seconds");
+    $('.Timer').text("You have survived for: " + Math.round((new Date - time) / 1000, 0) + " Seconds")
   }, 1000);
 }
 
@@ -65,7 +65,7 @@ characterSelect.mouseleave(function(event) {
 characterSelect.mousedown(function(event) {
   current = $(this);
   characterSelect.each(function(index) {
-    $(this).removeClass('dark');
+    $(this).removeClass('dark')
   });
   $(this).addClass('dark');
   player.sprite = $(this).attr('src');
